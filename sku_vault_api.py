@@ -14,8 +14,8 @@ def get_items_inventory():
         "UserToken": user_token,
     }
     response = requests.post(url, json=payload, headers=headers)
-    # TODO include only the skus that beging with CM- or WS01
-    # TODO for the Availability date from vendor, use today's date
+    # include only the skus that beging with CM- or WS01
+    # for the Availability date from vendor, use today's date
     if response.status_code == 200:
         result = [
             {
